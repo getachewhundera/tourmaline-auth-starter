@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import axios from 'axios';
+// import axios from 'axios';
+// import { useHistory } from 'react-router-dom';
 
 function InfoPage() {
   const dispatch = useDispatch(); 
@@ -17,8 +18,18 @@ function InfoPage() {
 
   const addPet = (e) => {
     e.preventDefault();
-    dispatch({ type: 'ADD_PET', payload: { name: petName } }); 
+    dispatch({ type: 'ADD_PET', payload: { name: petName }}); 
   } 
+
+  // const history = useHistory(); 
+  // //can send this function along with the action in the dispatch. 
+  // const callback = () => {
+  //   console.log('Callback function!'); 
+  //   //alert 
+  //   //history push 
+  //   //... 
+  //   history.push('./home')
+  // }
 
   return (
     <div className="container">

@@ -23,6 +23,7 @@ function* addPet(action) {
        yield axios.post('/api/pets', action.payload);
        //Pass to the reducer 
        yield put({ type: 'FETCH_PET_LIST'}); 
+    //    action.callback(); 
     } catch (error) { 
         console.log('ERROR in addPet', error); 
         alert('Something went wrong!'); 
